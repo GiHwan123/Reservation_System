@@ -1,0 +1,12 @@
+호텔 예약 시스템
+
+예약 - num,시간,회원id
+회원 - num,id,password,reservation
+
+회원가입 구현 중 어려움을 겪은 점
+1. 넘겨주는 command에 오타가 난 걸 20분동안 찾지 못해 헤맸음..
+
+로그인 구현 중 어려움을 겪은 점
+1. 임시로 person/11 id,pw로 로그인 후 세션을 유지한 채 main.html로 넘어가기
+	-> main.html로 넘어가는것이 아닌 loginmain.jsp로 넘어가서
+	우측상단	login,register 버튼을 logout 버튼으로 변경

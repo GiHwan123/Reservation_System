@@ -32,4 +32,12 @@ public class Reservation {
 	@ManyToOne
 	@JoinColumn(name="customer_id")
 	private	Customer customer;
+
+	@Override
+	public String toString() {
+		return "Reservation [reservationNumber=" + reservationNumber + ", date=" + date + ", customer=" + customer.getCustomerNumber()
+				+ "]";
+	}
+	
+	
 }

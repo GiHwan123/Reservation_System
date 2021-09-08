@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
@@ -17,8 +19,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
   <a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
-  <a href="customer/login.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Login</a>
-  <a href="customer/register.html" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Register</a>
+  <a href="customer/logout.jsp" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Logout</a>
 </div>
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">

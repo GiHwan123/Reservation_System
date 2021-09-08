@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+<form action="../reservation" method="post">
+	<input type="hidden" name="command" value="customerinsert">
+	<table border="1">
+		<tr>
+			<td>id</td><td><input type="text" name="id"></td>
+		</tr>
+		<tr>	
+			<td>pw</td><td><input type="password" name="pw"></td>
+	 	</tr>
+	 	<tr>
+	 		<td colspan="2"><input type="submit" value="가입">&nbsp;&nbsp;&nbsp;<input type="reset" value="취소"></td>
+	 	</tr>
+	</table>
+</form>
+<br><br><br>
+<a href="../main.html">메인 화면 이동</a>
+</body>
+</html>
