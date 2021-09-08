@@ -12,6 +12,6 @@
 </head>
 <body>
 		Response.Write("<script>alert('<%=request.getAttribute("successMsg")%>');</script>");
-		Response.Write("<script>location.href='customer/login.html';</script>");
+		Response.Write("<script>location.href='main.html';</script>");
 </body>
 </html>

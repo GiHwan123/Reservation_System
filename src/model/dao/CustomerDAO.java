@@ -15,7 +15,12 @@ import util.DBUtil2;
 
 public class CustomerDAO {
 	
-	
+	/**
+	 * login
+	 * @param id
+	 * @param pw
+	 * @return
+	 */
 	public static String isMember(String id, String pw){
 		Connection con = null;
 		PreparedStatement pstmt = null;

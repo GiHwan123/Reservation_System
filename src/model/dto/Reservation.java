@@ -2,6 +2,7 @@ package model.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -26,16 +27,16 @@ public class Reservation {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="res_seq")
 	private Long reservationNumber;
 	
-	@Column(name="date")
-	private String date;
+	@Column(name="res_date")
+	private String resDate;
 	
-	@ManyToOne
-	@JoinColumn(name="customer_id")
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="customer_number")
 	private	Customer customer;
 
 	@Override
 	public String toString() {
-		return "Reservation [reservationNumber=" + reservationNumber + ", date=" + date + ", customer=" + customer.getCustomerNumber()
+		return "Reservation [reservationNumber=" + reservationNumber + ", res_date=" + resDate + ", customer=" + customer.getCustomerNumber()
 				+ "]";
 	}
 	

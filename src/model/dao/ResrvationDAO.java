@@ -5,27 +5,39 @@ import java.sql.SQLException;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
+import org.junit.jupiter.api.Test;
+
 import model.dto.Customer;
 import model.dto.Reservation;
 import util.DBUtil;
 
 public class ResrvationDAO {
-	
-	public static void addReservation(String date,Customer customer) throws SQLException{
+
+	@Test
+	public static boolean addReservation(Customer customer,String date) {// throws SQLException {
 		
-		EntityManager em = DBUtil.getEntityManager();
-		EntityTransaction tx = em.getTransaction();
-		tx.begin();
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		boolean result = false;
 		try {
-			Reservation reservation = new Reservation();
-			reservation.setDate(date);
-			reservation.setCustomer(customer);
+			em = DBUtil.getEntityManager();
+			tx = em.getTransaction();
 			
+			tx.begin();
+			Reservation reservation=new Reservation();
+			reservation.setResDate(date);
+			reservation.setCustomer(customer);
 			em.persist(reservation);
 			tx.commit();
+			result = true;
+			return result;
+		}catch(Exception e) {
+			tx.rollback();
+			e.printStackTrace();
 		} finally {
 			em.close();
-			em=null;
+			em = null;
 		}
+		return result;
 	}
 }

@@ -23,7 +23,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @SequenceGenerator(name="cus_seq", sequenceName="cus_seq_id", initialValue=1, allocationSize=1)
-public class Customer {
+public class Customer{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="cus_seq")
@@ -36,7 +36,7 @@ public class Customer {
 	@Column(name="customer_password")
 	private String password;
 	
-	@OneToMany(mappedBy="customer", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="customer")//, fetch = FetchType.EAGER)
 	List<Reservation> reservations = new ArrayList<>();
 	
 	public Customer(String Id,String password) {

@@ -74,4 +74,30 @@ public class Controller extends HttpServlet {
 			
 		}
 	}
+	
+	protected void reservationAdd(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String url = "showError.jsp";
+		
+		String date = request.getParameter("date");
+		
+		
+		//해킹등으로 불합리하게 요청도 될수 있다는 가정하에 모든 데이터가 제대로 전송이 되었는지를 검증하는 로직
+		if(id != null && id.length() !=0) {
+		
+			Customer customer = new Customer(id,pw);
+			try{
+				boolean result = CustomerDAO.addCustomer(customer);
+				if(result){
+					request.setAttribute("customer", customer);
+					request.setAttribute("successMsg", "가입 완료");
+					url = "customer/registersuccess.jsp";
+				}else{
+					request.setAttribute("errorMsg", "다시 시도하세요");
+				}
+			}catch(Exception s){
+				request.setAttribute("errorMsg", s.getMessage());
+			}
+			request.getRequestDispatcher(url).forward(request, response);
+		}
+	}
 }
