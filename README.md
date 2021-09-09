@@ -1,2 +1,3 @@
-# My Hotel Reservation
-<hr>
+🏟# My Hotel Reservation
+> 고객의 입장에서 회원가입/로그인/예약생성/마이페이지조회 기능을 수행할 수 있는 호텔 예약 페이지
+
