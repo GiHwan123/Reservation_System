@@ -9,7 +9,7 @@
 
 ## 2. Tech Stack
 
-* Java
+###### * Java
   * JDBC/JPA/lombok/hibernate/JUnit
 * DB
   * OracleDB
