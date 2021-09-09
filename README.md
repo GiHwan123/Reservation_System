@@ -6,3 +6,12 @@
 ## 1. Entity Relationship
 
 ![호텔예약시스템](https://user-images.githubusercontent.com/57335699/132653026-68a04107-a4ee-4e2f-9fdf-ef5ce867ee40.PNG)
+
+## 2. Tech Stack
+
+>Java
+>>JDBC/JPA/lombok/hibernate/JUnit
+>DB
+>>OracleDB
+>Web
+>HTML/CSS/JavaScript/JSP
