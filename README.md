@@ -10,8 +10,8 @@
 ## 2. Tech Stack
 
 * Java
-- JDBC/JPA/lombok/hibernate/JUnit
+** JDBC/JPA/lombok/hibernate/JUnit
 * DB
-- OracleDB
+** OracleDB
 * Web
-- HTML/CSS/JavaScript/JSP
+** HTML/CSS/JavaScript/JSP
