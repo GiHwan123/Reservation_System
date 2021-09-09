@@ -8,6 +8,6 @@
 </head>
 <body>
 		Response.Write("<script>alert('<%=session.getAttribute("id") %> 님 환영합니다.');</script>");
-		Response.Write("<script>location.href='loginmain.jsp';</script>");
+		Response.Write("<script>location.href='loginmain.html';</script>");
 </body>
 </html>
