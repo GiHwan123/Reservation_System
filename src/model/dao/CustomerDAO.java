@@ -75,6 +75,11 @@ public class CustomerDAO {
 		}
 	}
 	
+	/**
+	 * select Customernumber
+	 * @param id
+	 * @return
+	 */
 //	@Test
 	public static long select(String id) {
 		Connection con = null;

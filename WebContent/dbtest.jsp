@@ -1,4 +1,4 @@
-<%@page import="model.dao.ResrvationDAO"%>
+<%@page import="model.dao.ReservationDAO"%>
 <%@page import="model.dto.Reservation"%>
 <%@page import="model.dao.CustomerDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -12,7 +12,7 @@
 <body>
 
 <%
-	ResrvationDAO.addReservation(1l, "20210913");
+	ReservationDAO.addReservation(1l, "20210913");
 %>   
 
 </body>

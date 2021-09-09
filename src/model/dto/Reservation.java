@@ -25,7 +25,7 @@ public class Reservation {
 	@Id
 	@Column(name="reservation_number")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="res_seq")
-	private Long reservationNumber;
+	private long reservationNumber;
 	
 	@Column(name="res_date")
 	private String resDate;
@@ -33,7 +33,11 @@ public class Reservation {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="customer_number")
 	private	Customer customer;
-
+	
+	public Reservation(long reservation_number,String res_date) {
+		this.reservationNumber=reservation_number;
+		this.resDate=res_date;
+	}
 	@Override
 	public String toString() {
 		return "Reservation [reservationNumber=" + reservationNumber + ", res_date=" + resDate + ", customer=" + customer.getCustomerNumber()

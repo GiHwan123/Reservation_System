@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-</style>
+<head>
+	<title>W3.CSS Template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+	</style>
+</head>
+
 <body class="w3-light-grey">
 
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large">
-  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>Logo</a>
+  <a href="#" class="w3-bar-item w3-button w3-red w3-mobile"><i class="fa fa-bed w3-margin-right"></i>My Hotel</a>
   <a href="mypage/mypage.jsp" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">MyPage</a>
   <a href="customer/logout.jsp" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile">Logout</a>
 </div>
@@ -22,22 +25,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
   <img class="w3-image" src="images/hotel.jpg" alt="Welcome" style="min-width:1000px" width="1500" height="800">
   <div class="w3-display-left w3-padding w3-col l6 m8">
     <div class="w3-container w3-red">
-      <h2><i class="fa fa-bed w3-margin-right"></i>Welcome</h2>
+      <h2><i class="fa fa-bed w3-margin-right"></i>Welcome, Make Reservation</h2>
     </div>
     <div class="w3-container w3-white w3-padding-16">
-      <form action="reservation" method="post">
-      <input type="hidden" name="command" value="reservationadd">
+    
+      <!-- <form action="reservation" method="post"> -->
+      
        <div class="w3-row-padding" style="margin:0 -16px;">
           <div class="w3-half w3-margin-bottom">
-            <label><i class="fa fa-calendar-o"></i> Check In</label>
-            <input class="w3-input w3-border" type="text" placeholder="YYYYMMDD" name="CheckIn" required>
+            <input class="w3-input w3-border" type="text" placeholder="YYYYMMDD" name="CheckIn" id="CheckIn" required>
           </div>
         </div>
         </div>
-        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>
-      </form>
+        <!-- <input type="hidden" name="command" value="reservationadd"> -->        
+        <button class="w3-button w3-dark-grey" onclick="sendReq('add')"><i class="fa fa-search w3-margin-right"></i>Reserve</button>
+        
+        
+     <!--    <input type="hidden" name="command" value="reservationdelete">         -->
+        <button class="w3-button w3-dark-grey" onclick="sendReq('delete')"><i class="fa fa-search w3-margin-right"></i>Cancel</button>
+        
+  <!--     </form>
+       -->
     </div>
   </div>
 </header>
+
+<script type="text/javascript">
+	function sendReq(v){
+		if(v === 'add'){
+			location.href='reservation?command=reservationadd&CheckIn='+document.getElementById("CheckIn").value;
+		}else if(v === 'delete'){
+			location.href='reservation?command=reservationdelete&CheckIn='+document.getElementById("CheckIn").value;
+		}else{
+			alert('다시 예약해 주세요');
+		}
+		
+		
+	}
+
+</script>
+
 </body>
 </html>
