@@ -9,9 +9,9 @@
 
 ## 2. Tech Stack
 
-*Java
- -JDBC/JPA/lombok/hibernate/JUnit
-*DB
- -OracleDB
-*Web
- -HTML/CSS/JavaScript/JSP
+* Java
+- JDBC/JPA/lombok/hibernate/JUnit
+* DB
+- OracleDB
+* Web
+- HTML/CSS/JavaScript/JSP
