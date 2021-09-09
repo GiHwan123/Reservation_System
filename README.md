@@ -16,7 +16,11 @@
 * Web
   * HTML/CSS/JavaScript/JSP
 
-## 3. Function
+## 3. Program Structure
+
+![Structure](https://user-images.githubusercontent.com/57335699/132658530-ec9f10b4-449c-4f22-8f90-c41f78c698f4.PNG)
+
+## 4. Function
 * 회원가입
   * ID,PASSWORD 만을 입력받아 회원 등록 후 Customer 테이블에 저장
 
@@ -38,6 +42,15 @@
    * 로그인 정보 확인
    * 예약 내역 확인
 
-## 4. TODO
+## 5. TODO
+
+1) 예약 가능/불가능한 날짜 표현 기능
+2) 마이페이지 내부 회원정보 수정
+3) 마이페이지 내부 예약 정보 수정
+4) 관리자 페이지 및 관리자 로그인 기능
+5) 회원가입/로그인/정보 생성/수정/삭제/조회에 관한 로그 기록 
+6) etc...
+
+## 6. ISSUES
 
 1) 
