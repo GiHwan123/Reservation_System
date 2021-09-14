@@ -81,7 +81,6 @@ public class ReservationDAO {
 			if(rset.next()) {
 				em.remove(em.find(Reservation.class, number));
 				tx.commit();
-				return true;
 			}else {
 				return false;
 			}
@@ -92,7 +91,7 @@ public class ReservationDAO {
 			em=null;
 			DBUtil2.close(con, pstmt,rset);
 		}
-		return false;
+		return true;
 		}
 	
 	

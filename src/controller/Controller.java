@@ -96,11 +96,12 @@ public class Controller extends HttpServlet {
 	}
 	
 	protected void reservationDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String date = request.getParameter("Cancel");
+		String date = request.getParameter("CheckIn");
 		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
 		long number= CustomerDAO.select(id);
 		boolean result = ReservationDAO.deleteReservation(number, date);
+		System.out.println(result);
 		if(result==true) {
 			request.getRequestDispatcher("reservation/deletesuccess.jsp").forward(request, response);
 		}else {
